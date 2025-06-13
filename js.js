@@ -38,3 +38,28 @@
   });
   
   
+
+
+
+
+
+  const imageWrapper = document.querySelector('.image-wrapper');
+const hoverCircle = document.querySelector('.hover-circle');
+
+imageWrapper.addEventListener('click', () => {
+  imageWrapper.classList.toggle('clicked');
+});
+
+imageWrapper.addEventListener('mousemove', (e) => {
+  const rect = imageWrapper.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  hoverCircle.style.left = `${x}px`;
+  hoverCircle.style.top = `${y}px`;
+  hoverCircle.style.display = 'block';
+});
+
+imageWrapper.addEventListener('mouseleave', () => {
+  hoverCircle.style.display = 'none';
+});
