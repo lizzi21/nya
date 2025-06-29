@@ -194,50 +194,7 @@ body {
   padding: 2em;
 }
 
-.pdf-container {
-  background: white;
-  border-radius: 10px;
-  padding: 1em;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow: auto;
-  text-align: center;
-}
 
-#pdfCanvas {
-  max-width: 100%;
-  height: auto;
-}
-
-.pdf-controls {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  font-family: 'Raleway', sans-serif;
-  color: #333;
-}
-
-.pdf-controls button {
-  padding: 0.5em 1em;
-  background: #AAC4E7;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 2rem;
-  color: #000000;
-  cursor: pointer;
-  z-index: 10;
-}
 
 
 /* Футер */
@@ -331,4 +288,27 @@ body {
   padding: 0.5em 1em;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.baby-left, .baby-right {
+  position: absolute;
+  bottom: 10px;
+  height: 50px;
+}
+
+.baby-left {
+  left: 10px;
+}
+
+.baby-right {
+  right: 10px;
+}
+.spin {
+  animation: spin 8s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

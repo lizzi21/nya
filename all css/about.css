@@ -99,17 +99,35 @@ body {
   }
   
   /* Футер */
+
+
+  .baby-left, .baby-right {
+    position: absolute;
+    bottom: 10px;
+    height: 50px;
+  }
+  
+  .baby-left {
+    left: 10px;
+  }
+  
+  .baby-right {
+    right: 10px;
+  }
   .footer {
     width: 100%;
     background-color: #F8ECE5;
     text-align: center;
     padding: 3em 1em;
+    margin: 0;
+    border: none;
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
   }
-  
   .footer-wrapper {
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
   }
   
   .footer-logo {
@@ -142,4 +160,16 @@ body {
     font-weight: 300;
     font-size: 1rem;
   }
+  
+
+  .spin {
+    animation: spin 8s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
   

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imagiverse | Ивенты</title>
   <link rel="stylesheet" href="all css/event.css" />
+  <link rel="icon" href="img/image 68.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
 
   <script src="event.js" defer></script>
@@ -30,64 +31,90 @@
     </div>
   </header>
 
-  <!-- Слайдер событий -->
-  <main class="event-slider">
-    <div class="slider-container">
-      <button class="arrow left" id="prev">&#8592;</button>
-      <div class="slides" id="slides">
-        
-        <div class="slide active">
-          <img src="img/A4 - 61.png" alt="Событие 1" />
-          <div class="slide-info">
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <a href="404.html" class="cta-button">Записаться</a>
+  <main class="event-page">
+
+    <!-- Первая листалка -->
+    <section class="event-slider" id="slider1">
+      <div class="slider-container">
+        <button class="arrow left" id="prev1">&#8592;</button>
+        <div class="slides" id="slides1">
+          <div class="slide active">
+            <img src="img/A4 - 61.png" alt="Event 1" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
+          </div>
+          <div class="slide">
+            <img src="img/A4 - 63.png" alt="Event 2" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
+          </div>
+          <div class="slide">
+            <img src="img/A4 - 62.png" alt="Event 3" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
           </div>
         </div>
-
-        <div class="slide">
-          <img src="img/A4 - 63.png" alt="Событие 2" />
-          <div class="slide-info">
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <a href="404.html" class="cta-button">Записаться</a>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="img/A4 - 62.png" alt="Событие 3" />
-          <div class="slide-info">
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <a href="404.html" class="cta-button">Записаться</a>
-          </div>
-        </div>
-
+        <button class="arrow right" id="next1">&#8594;</button>
       </div>
-      <button class="arrow right" id="next">&#8594;</button>
-    </div>
+    </section>
+  
+    <!-- Вторая листалка -->
+    <section class="event-slider" id="slider2">
+      <div class="slider-container">
+        <button class="arrow left" id="prev2">&#8592;</button>
+        <div class="slides" id="slides2">
+          <div class="slide active">
+            <img src="img/A4 - 64.png" alt="Event A" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
+          </div>
+          <div class="slide">
+            <img src="img/A4 - 65.png" alt="Event B" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
+          </div>
+        </div>
+        <button class="arrow right" id="next2">&#8594;</button>
+      </div>
+    </section>
+  
+    <!-- Третья листалка -->
+    <section class="event-slider" id="slider3">
+      <div class="slider-container">
+        <button class="arrow left" id="prev3">&#8592;</button>
+        <div class="slides" id="slides3">
+          <div class="slide active">
+            <img src="img/A4 - 67.png" alt="Event X" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
+          </div>
+          <div class="slide">
+            <img src="img/A4 - 68.png" alt="Event Y" />
+            <div class="slide-info"><h2></h2><p></p><p></p><a href="404.html" class="cta-button">Записаться</a></div>
+          </div>
+        </div>
+        <button class="arrow right" id="next3">&#8594;</button>
+      </div>
+    </section>
+  
   </main>
-
+  
   <!-- Футер -->
   <footer class="footer">
     <div class="footer-wrapper">
       <img src="img/Group 34 copy.png" alt="Логотип футера" class="footer-logo" />
       <div class="footer-text">
         <p>London, NW1 8XD United Kingdom</p>
-        <p><a href="mailto:hello@imagiverse.com">hello@imagiverse.com</a></p>
+        <p><a >hello@imagiverse.co.uk</a></p>
         <p>+44 7911 123456</p>
       </div>
       <nav class="footer-nav">
         <ul>
           <li><a href="index.html#about">О нас</a></li>
           <li><a href="book.html">Книга</a></li>
+          <li><a href="event.html">Ивенты</a></li>
           <li><a href="index.html#merch">Магазин</a></li>
           <li><a href="contact.html">Контакт</a></li>
         </ul>
       </nav>
+
+      <img src="img//image 68.png" alt="Baby Left" class="baby-left spin" />
+      <img src="img/image 68.png" alt="Baby Right" class="baby-right spin" />
+
     </div>
   </footer>
 </body>
