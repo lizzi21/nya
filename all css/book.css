@@ -101,7 +101,7 @@ body {
 }
 
 .main-book {
-  width: 350px;
+  width: 450px;
   max-width: 100%;
   animation: float 3s ease-in-out infinite;
   cursor: pointer;
