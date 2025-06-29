@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imagiverse | Книга</title>
+  
+  <link rel="stylesheet" href="all css/book.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+  <script src="/js.js"></script>
+  <script src="book.js" defer></script>
+</head>
+<body>
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/Group 34 copy.png" alt="Логотип">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="book.html" class="active">Книга</a></li>
+          <li><a href="index.html#events">Ивенты</a></li>
+          <li><a href="index.html#merch">Мерч</a></li>
+          <li><a href="contact.html">Контакт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Секция книги -->
+<div class="book-section">
+  <div class="book-text-block">
+    <img src="img/image 66.png" class="small-book" alt="Поворотная книга" />
+    <div class="book-text">
+      На страницах книги описаны различные игровые зоны, каждая из которых помогает развивать важные навыки: мышление, творчество, координацию, общение и воображение. Это взгляд на то, как игра на свежем воздухе может стать мощным инструментом обучения и роста.
+    </div>
+  </div>
+
+  <div class="book-right">
+    <img src="img/ищщл.png" class="main-book" id="bookClick" alt="Книга Imagivers" />
+  </div>
+</div>
+
+<div class="hover-circle" id="hoverCircle">Читать</div>
+
+<!-- Просмотр книги -->
+<div class="book-viewer" id="bookViewer">
+  <span class="close-btn" id="closeViewer">✖</span>
+  <img id="bookPage" src="img/pages/page1.jpg" alt="Страница книги" />
+  <div class="nav-buttons">
+    <button id="prevPage">←</button>
+    <span id="pageInfo">1 / 36</span>
+    <button id="nextPage">→</button>
+  </div>
+</div>
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <img src="img/Group 34 copy.png" alt="Логотип футера" class="footer-logo">
+      <div class="footer-text">
+        <p>London, NW1 8XD United Kingdom</p>
+        <p><a href="mailto:hello@imagiverse.com">hello@imagiverse.com</a></p>
+        <p>+44 7911 123456</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="book.html">Книга</a></li>
+          <li><a href="index.html#merch">Магазин</a></li>
+          <li><a href="contact.html">Контакт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  
+
+
+
+
+</body>
+</html>

@@ -3,98 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Контакт</title>
-  <title>I M A G I V E R S E</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>Imagiverse | Контакт</title>
+  
+  <link rel="stylesheet" href="all css/contact.css" />
+  <link rel="icon" href="img/image 68.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
 
-    body {
-      font-family: 'Raleway', sans-serif;
-      background-color: #fffaf9;
-      color: #ec8f5e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 900px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 2em;
-    }
-
-    .container img.character {
-      width: 120px;
-      margin-bottom: 1em;
-    }
-
-    .curve-text {
-      font-size: 1.4rem;
-      margin-bottom: 1.2em;
-      transform: rotate(-2deg);
-    }
-
-    form {
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
-    }
-
-    input, textarea {
-      border: none;
-      border-bottom: 2px solid #ec8f5e;
-      background: transparent;
-      padding: 0.6em 0;
-      font-size: 1rem;
-      color: #ec8f5e;
-      outline: none;
-      font-family: 'Raleway', sans-serif;
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: #ec8f5e;
-    }
-
-    button {
-      align-self: flex-end;
-      background: none;
-      border: none;
-      color: #ec8f5e;
-      font-size: 1.8rem;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    button:hover {
-      transform: translateX(5px);
-    }
-
-    .thank-you {
-      display: none;
-      margin-top: 2em;
-      font-size: 1.2rem;
-      color: #ec8f5e;
-    }
-
-    @media (max-width: 600px) {
-      .curve-text {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -118,7 +33,7 @@
 
   <div class="container">
     <img src="img/Linked Path Group.png" alt="phrase" class="phrase" />
-    <img src="img/image 50.png" alt="Character" class="character" />
+    <img src="img/image 72.png" alt="Character" class="character" />
 
     <form onsubmit="handleSubmit(event)">
       <input type="text" name="name" placeholder="Введи своё имя" required />
@@ -127,9 +42,27 @@
     </form>
 
     <div class="thank-you" id="thankYou">🌸 Спасибо за твоё сообщение!</div>
-   
+    
+  
   </div>
-
+  <footer class="footer reveal">
+    <div class="footer-wrapper">
+      <img src="img/Group 34 copy.png" alt="Логотип футера" class="footer-logo">
+      <div class="footer-text">
+        <p>London, NW1 8XD United Kingdom</p>
+        <p><a href="mailto:hello@imagiverse.com">hello@imagiverse.com</a></p>
+        <p>+44 7911 123456</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="index.html#book">Книга</a></li>
+          <li><a href="index.html#merch">Магазин</a></li>
+          <li><a href="contact.html">Контакт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
   <script>
     function handleSubmit(e) {
       e.preventDefault();
@@ -144,6 +77,30 @@
       document.getElementById('thankYou').style.display = 'block';
       form.reset();
     }
-  </script>
+    function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const message = form.message.value;
+
+    console.log("Новое сообщение:");
+    console.log("Имя:", name);
+    console.log("Сообщение:", message);
+
+    document.getElementById('thankYou').style.display = 'block';
+    form.reset();
+  }
+
+  // Плавное появление футера при прокрутке
+  window.addEventListener('scroll', () => {
+    const footer = document.querySelector('.footer.reveal');
+    const triggerPoint = window.innerHeight + window.scrollY;
+    const footerTop = footer.offsetTop;
+
+    if (triggerPoint >= footerTop) {
+      footer.classList.add('visible');
+    }
+  });
+</script>
 </body>
 </html>

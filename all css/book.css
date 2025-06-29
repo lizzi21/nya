@@ -1,0 +1,334 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fffaf9;
+  color: #333;
+}
+
+/* Навигация */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 250, 249, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar .navbar-inner {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: 2px dotted transparent;
+  padding-bottom: 3px;
+  transition: all 0.3s ease;
+}
+
+.navbar nav ul li:nth-child(1) a:hover { color: #E57373; border-bottom-color: #E57373; }
+.navbar nav ul li:nth-child(2) a:hover { color: #64B5F6; border-bottom-color: #64B5F6; }
+.navbar nav ul li:nth-child(3) a:hover { color: #81C784; border-bottom-color: #81C784; }
+.navbar nav ul li:nth-child(4) a:hover { color: #FFD54F; border-bottom-color: #FFD54F; }
+.navbar nav ul li:nth-child(5) a:hover { color: #e17025; border-bottom-color: #e17025; }
+
+/* Книга */
+.book-section {
+  margin-top: 160px;
+  padding: 2em 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.book-text-block {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.small-book {
+  width: 70px;
+  margin-bottom: 1em;
+}
+
+.book-text {
+  font-size: 32px;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+}
+
+.book-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-book {
+  width: 350px;
+  max-width: 100%;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.read-circle {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: #AAC4E7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 999;
+}
+
+.book-viewer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-viewer iframe {
+  width: 90vw;
+  height: 90vh;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hover-circle {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: #AAC4E7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300; /* Light */
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+
+.book-viewer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.pdf-container {
+  background: white;
+  border-radius: 10px;
+  padding: 1em;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  text-align: center;
+}
+
+#pdfCanvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.pdf-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+.pdf-controls button {
+  padding: 0.5em 1em;
+  background: #AAC4E7;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2rem;
+  color: #000000;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+/* Футер */
+.footer {
+  width: 100%;
+  background-color: #F8ECE5;
+  text-align: center;
+  padding: 3em 1em;
+  margin: 0;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+.footer-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-logo {
+  height: 80px;
+  margin-bottom: 1em;
+}
+
+.footer-text p {
+  margin: 0.5em 0;
+  color: #444;
+}
+
+.footer-text a {
+  color: #444;
+  text-decoration: none;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 2em 0;
+  margin: 0;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #fffaf9;
+}
+
+.book-viewer {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(220, 218, 214, 0.8);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+}
+
+#bookPage {
+  max-width: 90%;
+  max-height: 85vh;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+
+.nav-buttons {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: white;
+}
+
+.nav-buttons button {
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
